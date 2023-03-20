@@ -1,6 +1,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+- [💻 Contents](#contents)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
 - [💻 Getting Started](#getting-started)
@@ -16,7 +17,8 @@
 
 > Comprehensive notes on the c programming Language
 
-
+# 📖 Contents<a name="contents"></a>
+#### [Pointers in C](https://github.com/Cavein254/cnotes/blob/main/pointers/pointers.md)
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
