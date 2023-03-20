@@ -5,8 +5,8 @@
     - [Tech Stack](#tech-stack)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-- [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
+- [👥 Authors](#authors)
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
 
@@ -35,6 +35,16 @@ Clone this repository to your desired folder:
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+# 🤝 Contributing <a name="contributing"></a>
+Contributions, issues, and feature requests are welcome!
+
+[Check out our contribution guide](https://github.com/Cavein254/cnotes/blob/main/contributing.md)
+
+Feel free to check the [issues page](https://github.com/Cavein254/cnotes/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Authors <a name="authors"></a>
 👤 **Author**
 
@@ -44,13 +54,6 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/Cavein254/cnotes/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
