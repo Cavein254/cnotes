@@ -1,8 +1,8 @@
 # :computer: HOW TO CONTRIBUTE :rocket: :vulcan_salute: :muscle: :airplane:
 
-I'm really glad you're reading this, because we need volunteer developers to help this project a success.
+I'm really glad you're reading this, because we need volunteer developers to help this project become a success.
 
-The goal is to make informative notes on the c language that can benefit all of us in the course of our learning.
+The goal is to make informative notes on the `C language` that can benefit all of us in the course of our learning.
 
 ## GETTING STARTED :walking: :footprints:
 
@@ -10,9 +10,9 @@ The goal is to make informative notes on the c language that can benefit all of 
 
 Sign into your GibHub or [create a free GitHub account](https://www.github.com/) if you lack one.
 
-### STEP 2: Fork the project repository
+### STEP 2: Fork the project repository :fork_and_knife:
 
-Find the project's repository on GitHub, and then "fork" it by clicking the Fork button in the upper right corner:
+[Find the project's repository on GitHub](https://github.com/Cavein254/cnotes), and then "fork" it by clicking the Fork button in the upper right corner
 
 ### STEP 3: Clone your folk :fork_and_knife:
 
