@@ -46,7 +46,7 @@ git remote add https://github.com/Cavein254/cnotes.git
 Before you start making any changes to your local files, it's a good practice to first synchronize your local repository with the project repository. 
 
 ```bash
-git pull upstream master 
+git pull upstream main 
 ```
 
 ### Step 8: Create a new branch :star2:
@@ -79,7 +79,7 @@ git push origin doc-fixes
 
 ### Step 12: Begin the pull request :clock10:
 
-Return to your fork on GitHub, and refresh the page. You may see `Compare & pull request` green button. Click on it.
+Return to your fork on GitHub, and refresh the page. You will see `Compare & pull request` green button. Click on it.
 
 ### Step 13: Create the pull request :man_firefighter:
 
@@ -88,3 +88,7 @@ Write a descriptive title for your pull request, and then include more details i
 ### Spep 14: Finalizing :heart_decoration: :firefighter: :rocket:
 
 After creating the pull request edit the `README.md` file on the author section and add your details as an author.
+
+Do not forget to leave a star :star: :star: :star:
+
+[Happy coding](!https://i0.wp.com/media2.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
