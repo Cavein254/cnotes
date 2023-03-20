@@ -91,4 +91,4 @@ After creating the pull request edit the `README.md` file on the author section 
 
 Do not forget to leave a star :star: :star: :star:
 
-[Happy coding](!http://i0.wp.com/media2.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
+![Happy coding](https://i0.wp.com/media2.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
