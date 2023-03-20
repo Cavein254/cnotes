@@ -39,14 +39,19 @@ The value of num is 10
 The value of ptr is 10 
 ```
 Notice that we use the `%p` in `printf` to display the addresses. As shown above, `ptr` has the same address as `num`. These addresses also contain the same values.
-
+#### Pointer initialization
+Pointers in `c` are initialized using the following command:
+```c
+int num;
+int* ptr = &num;
+```
 #### Dereferencing a pointer
 When we have the address of a variable, we can find the value within the memory by dereferencing the pointer to display the contents.
 ```c
 in a = 10;
-printf("%d \n", *(&x));
+printf("%d \n", *(&a));
 ```
-Pointers will enable us to determine the value of a variable regardless of previous alternations
+An advantage of using pointers is that it enables us to determine the value of a variable regardless of previous alternations
 ```c
     int num;
     int* ptr = &num;
@@ -88,18 +93,14 @@ Adding 40 to total becomes 100
 Adding 50 to total becomes 150 
 ```
 
-Pointers in `c` are initialized using the following command:
-```c
-int num;
-int* ptr = &num;
-```
+
 ## POINTERS AND STRINGS
 In c, strings are array of characters that end with the zero delimitor `\0`;
 ```c
 char my_string = [20];
 my_string[0]='I';
 my_string[1]=' ';
-my_string[2]='C';
+my_string[2]='c';
 my_string[3]='o';
 my_string[4]='d';
 my_string[5]='e';
@@ -107,32 +108,46 @@ my_string[6]='\0';
 ```
 The above `my_string` is a valid string in c. The above can also be written as
 ```c
-
-## TYPES OF POINTERS
-The C language provides a variety of pointers.
-
-1. THE NULL POINTER
-
-This is a pointer with a value of '0'. Null pointers are useful in declaring pointers that have not been assigned addresses. 
+char my_string[20] = {'I', ' ', 'c', 'o', 'd', 'e', '\0'};
+```
+But a much simpler way is:
 ```c
-int* a = NULL;
-printf("The value of a is %d", a);
+char my_string[20] = "I code";
+```
+When using double quotes, there is no need of adding `\0`.
+```c
+char str1[50] = "We doing hard things";
+char str2[50];
+    
+char* p1;
+char* p2;
+    
+p1 = str1;
+p2 = str2;
+    
+printf("The original value of str1 is:=>  %s \n", str1);
+printf("The original value of str2 is:=>  %s \n", str2);
+    
+while (*p1 != '\0') // '\0' represents the end of the string
+{
+    *p2 = *p1;
+    //move the pointer to the next location
+    *p1++;
+    *p2++;
+}
+// Add '\0' to the end of the string
+*p2 = '\0';
+    
+printf("The new value of str1 is:=>  %s \n", str1);
+printf("The new value of str2 is:=>  %s \n", str2);
+    
+return 0;
 ```
 ```bash
-The value of a is 0
-```
-2. THE VOID (GENERIC) POINTER
-This type of pointer has no data type. This pointer is useful when storing variables that have unknown data types
-```c
-void* a = NULL
-```
-3. THE WILD POINTER
-This is a pointer that has not yet been initialized. They point to memory location that are unknown and contain garbage data. Therefore, not advisable to use as it may crush your program.
-```c
-int* a; //Wild pointer
-printf("%d",*a);
-```bash
-Segmentation fault
+The original value of str1 is:=>  We doing hard things 
+The original value of str2 is:=>   
+The new value of str1 is:=>  We doing hard things 
+The new value of str2 is:=>  We doing hard things 
 ```
 Assuming: 
 ```c
@@ -146,6 +161,39 @@ Then;
 | *ptr = *ptr + 10 | a = a + 10     | a = 30     |
 | *ptr+=10         | a+=10          | a = 30     |
 | *ptr++           | a++            | 11         |
+
+## TYPES OF POINTERS
+The C language provides a variety of pointers.
+
+1. THE NULL POINTER
+
+
+This is a pointer with a value of '0'. Null pointers are useful in declaring pointers that have not been assigned addresses. 
+```c
+int* a = NULL;
+printf("The value of a is %d", a);
+```
+```bash
+The value of a is 0
+```
+2. THE VOID (GENERIC) POINTER
+
+
+This type of pointer has no data type. This pointer is useful when storing variables that have unknown data types
+```c
+void* a = NULL
+```
+3. THE WILD POINTER
+
+
+This is a pointer that has not yet been initialized. They point to memory location that are unknown and contain garbage data. Therefore, not advisable to use as it may crush your program.
+```c
+int* a; //Wild pointer
+printf("%d",*a);
+```
+```bash
+Segmentation fault
+```
 
 ## Gotcha
 
