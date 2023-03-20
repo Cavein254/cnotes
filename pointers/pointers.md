@@ -1,10 +1,50 @@
 # POINTERS IN C
 
-A pointer is a variable that stores the address of a memory location
+A pointer is a variable that stores the address of a memory location. Pointer are used to access the memory locations of variables and manupilate their addresses. 
+To understand, you can think of memory as a large city. A city has numerous houses. So how do we differentiate between houses? We can use Mail box numbers to make this diffrentiation. Mail box numbers are similar to addresses in memory.
+
+#### Declaring pointers in C
 
 Pointers are declared using a data type followed by an asterick
 ```c
 int* ptr;
+```
+
+After declaration, we can now initialize pointers using the ampersand symbol `&`
+```c
+int num = 10;
+int* ptr;
+ptr = &num;
+```
+Note the the `&` symbol returns the memory address in the above case the memory address of `a`.
+```c
+#include <stdio.h>
+
+int main () {
+    int num = 10;
+    int* ptr;
+    ptr = &num;
+    printf("The address of num is %p \n", &num);
+    printf("The address of ptr is %p \n", ptr);
+    //Accessing the value of variable directly
+    printf("The value of num is %d \n", num);
+    //Accessing the value of variable indirectly
+    printf("The value of ptr is %d \n", *ptr);
+}
+```
+```bash
+The address of num is 0x7ffd7483f0bc 
+The address of ptr is 0x7ffd7483f0bc 
+The value of num is 10 
+The value of ptr is 10 
+```
+Notice that we use the `%p` in `printf` to display the addresses. As shown above, `ptr` has the same address as `num`. These addresses also contain the same values.
+
+#### Dereferencing a pointer
+When we have the address of a variable, we can find the value within the memory by dereferencing the pointer to display the contents.
+```c
+in a = 10;
+printf("%d \n", *(&x));
 ```
 Pointers will enable us to determine the value of a variable regardless of previous alternations
 ```c
@@ -22,31 +62,8 @@ Pointers will enable us to determine the value of a variable regardless of previ
 The value of num is 12 
 The value of num is 1234 
 ```
-## POINTERS IN ARITHMETICS
+## POINTER IN ARITHMETICS
 It does not make sense in `c` to add two pointers. Remember, pointers are just addresses of memory locations. Therefore if it were allowed to add two pointer, the result would be a new memory location with garbage in it.
-```c
-int num1;
-int num2;
-int result = num1 + num2;
-    
-int* ptr1 = &num1;
-int* ptr2 = &num2;
-int* ptr_rst = &result;
-    
-num1 = 100;
-num2 = 200;
-    
-printf("The value of the num1 is %d \n", *ptr1); 
-printf("The value of the num2 is %d \n", *ptr2); 
-printf("The value of the result is %d \n", *ptr_rst);  
-```
-```bash
-The value of the num1 is 100 
-The value of the num2 is 200 
-The value of the result is 0 
-```
-Notice in the above code instead of getting `300` as the `result` our value is `0` which is wrong.
-
 The usefulness of pointer arithmetics is evident when dealing with arrays as shown:
 ```c
 //declare an array
@@ -56,11 +73,11 @@ int total = 0;
 //declare a pointer variable
 int* ptr;
 //assign the pointer to the first element of the array
-ptr = arr;
+ptr = arr; //This is similar to ptr == &a[0]
   for(int i = 0; i < 5; i++) {
     total = total + *ptr;
     printf("Adding %d to total becomes %d \n", *ptr, total);
-    ptr++;
+    ptr++; //Move the pointer to the next location
   }
 ```
 ```bash
@@ -76,6 +93,60 @@ Pointers in `c` are initialized using the following command:
 int num;
 int* ptr = &num;
 ```
+## POINTERS AND STRINGS
+In c, strings are array of characters that end with the zero delimitor `\0`;
+```c
+char my_string = [20];
+my_string[0]='I';
+my_string[1]=' ';
+my_string[2]='C';
+my_string[3]='o';
+my_string[4]='d';
+my_string[5]='e';
+my_string[6]='\0';
+```
+The above `my_string` is a valid string in c. The above can also be written as
+```c
+
+## TYPES OF POINTERS
+The C language provides a variety of pointers.
+
+1. THE NULL POINTER
+
+This is a pointer with a value of '0'. Null pointers are useful in declaring pointers that have not been assigned addresses. 
+```c
+int* a = NULL;
+printf("The value of a is %d", a);
+```
+```bash
+The value of a is 0
+```
+2. THE VOID (GENERIC) POINTER
+This type of pointer has no data type. This pointer is useful when storing variables that have unknown data types
+```c
+void* a = NULL
+```
+3. THE WILD POINTER
+This is a pointer that has not yet been initialized. They point to memory location that are unknown and contain garbage data. Therefore, not advisable to use as it may crush your program.
+```c
+int* a; //Wild pointer
+printf("%d",*a);
+```bash
+Segmentation fault
+```
+Assuming: 
+```c
+int a = 10;
+int* ptr = &a;
+```
+Then;
+| **Expression**   | **Equivalent** | **Answer** |
+|------------------|----------------|------------|
+| z = *ptr + 10    | z = a + 10     | z = 30     |
+| *ptr = *ptr + 10 | a = a + 10     | a = 30     |
+| *ptr+=10         | a+=10          | a = 30     |
+| *ptr++           | a++            | 11         |
+
 ## Gotcha
 
 > **Segmentation fault** is a specific kind of error caused by accessing memory that 'does not belong to you'. Its a helper function that keeps you from corrupting the memory and introducinng hard to debug bugs.
