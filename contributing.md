@@ -1,12 +1,12 @@
-# :computer: HOW TO CONTRIBUTE :rocket: :vulcan_salute: :firefighter:
+# :computer: HOW TO CONTRIBUTE :rocket: :vulcan_salute: :muscle: :airplane:
 
 I'm really glad you're reading this, because we need volunteer developers to help this project a success.
 
 The goal is to make informative notes on the c language that can benefit all of us in the course of our learning.
 
-## GETTING STARTED :walking:
+## GETTING STARTED :walking: :footprints:
 
-### STEP 1: Sign In to Github
+### STEP 1: Sign In to Github :eyes:
 
 Sign into your GibHub or [create a free GitHub account](https://www.github.com/) if you lack one.
 
@@ -41,7 +41,7 @@ git remote add https://github.com/Cavein254/cnotes.git
 
 ```
 
-### Step 7: Pull the latest changes from upstream into your local repository
+### Step 7: Pull the latest changes from upstream into your local repository :airplane:
 
 Before you start making any changes to your local files, it's a good practice to first synchronize your local repository with the project repository. 
 
@@ -77,7 +77,7 @@ When you are done making all of your changes, upload these changes to your fork 
 git push origin doc-fixes
 ```
 
-### Step 12: Begin the pull request
+### Step 12: Begin the pull request :clock10:
 
 Return to your fork on GitHub, and refresh the page. You may see `Compare & pull request` green button. Click on it.
 
